@@ -2,8 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const rapidApiKey = import.meta.env.VITE_RAPID_API_ARTICLE_KEY;
 
-export const articleAPI = createApi({
-  reducerPath: "articleAPI",
+export const articleApi = createApi({
+  reducerPath: "articleApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://article-extractor-and-summarizer.p.rapidapi.com/",
     prepareHeaders: (headers) => {
@@ -24,4 +24,4 @@ export const articleAPI = createApi({
   }),
 });
 
-export const { useLazyGetSummaryQuery } = articleAPI;
+export const { useLazyGetSummaryQuery } = articleApi;
